@@ -15,8 +15,8 @@ steps:
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: '{Azure Resource Manager Service Connection Name}'
+    azureSubscriptionEndpoint: 'ado-aks-sc'
     azureResourceGroup: 'private-devops'
-    kubernetesCluster: '{aks cluster name}'
+    kubernetesCluster: 'devopsprivate-aks-cluster'
     command: 'apply'
     arguments: '-f deploy.yaml'
