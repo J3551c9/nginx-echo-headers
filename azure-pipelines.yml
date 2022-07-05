@@ -14,7 +14,7 @@ steps:
     tags: 'latest'
 - task: Kubernetes@1
   inputs:
-    connectionType: 'Kubernetes Service Connection'
+    connectionType: 'None'
     azureSubscriptionEndpoint: 'ado-aks-kubeconfig'
     command: 'apply'
     arguments: '-f deploy.yaml'
