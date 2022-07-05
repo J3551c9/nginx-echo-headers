@@ -7,7 +7,7 @@ pool:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: '{Docker Registry Service Connection Name}'
+    containerRegistry: 'ado-acr-sc'
     repository: 'nginx-echo-headers'
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
