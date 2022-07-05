@@ -14,9 +14,7 @@ steps:
     tags: 'latest'
 - task: Kubernetes@1
   inputs:
-    connectionType: 'Azure Resource Manager'
+    connectionType: 'Kubernetes Service Connection'
     azureSubscriptionEndpoint: 'ado-aks-kubeconfig'
-    azureResourceGroup: 'private-devops'
-    kubernetesCluster: 'devopsprivate-aks-cluster'
     command: 'apply'
     arguments: '-f deploy.yaml'
