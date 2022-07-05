@@ -15,7 +15,7 @@ steps:
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'ado-aks-sc'
+    azureSubscriptionEndpoint: 'ado-aks-kubeconfig'
     azureResourceGroup: 'private-devops'
     kubernetesCluster: 'devopsprivate-aks-cluster'
     command: 'apply'
