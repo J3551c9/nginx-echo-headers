@@ -15,9 +15,13 @@ steps:
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'ADO-AKS-SC'
+    azureSubscriptionEndpoint: 'Microsoft Azure Internal Consumption(6af4982f-1b04-49ae-8cca-7856f3783a19)'
     azureResourceGroup: 'private-devops'
     kubernetesCluster: 'devopsprivate-aks-cluster'
     namespace: 'nginx'
     command: 'apply'
     arguments: '-f deploy.yaml'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Container Registry'
+    dockerRegistryEndpoint: 'ado-acr-sc'
+    forceUpdate: false
